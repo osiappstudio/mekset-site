@@ -4,22 +4,183 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MEKSET – Dolap tasarımı ve kesim listesi</title>
-<meta name="description" content="MEKSET: mobilya ve marangoz ustaları için dolap tasarımı ve kesim listesi uygulaması.">
+<meta name="description" content="MEKSET: mobilya ve marangoz ustaları için dolap tasarlayan, tüm kesim parçalarını liste halinde veren telefon uygulaması.">
 <style>
-body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:#faf6f1;color:#2b2118;line-height:1.6}
-main{max-width:720px;margin:0 auto;padding:48px 20px}
-h1{color:#a85a2a;margin:0 0 8px}
-a{color:#a85a2a}
-.btn{display:inline-block;margin-top:16px;padding:10px 18px;background:#a85a2a;color:#fff;border-radius:8px;text-decoration:none}
+:root{--cu:#a85a2a;--cu2:#ce9256;--ink:#2b2118;--bg:#faf6f1;--card:#fff;--sand:#f3e7d8;--line:#e3d5c5;--mute:#7a6a5a}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:var(--cu)}
+.wrap{max-width:980px;margin:0 auto;padding:0 18px}
+header.top{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem;letter-spacing:.04em;color:var(--ink);text-decoration:none}
+nav a{margin-left:16px;text-decoration:none;font-size:.95rem}
+.hero{display:grid;grid-template-columns:.85fr 1.25fr;gap:28px;align-items:center;padding:30px 0 40px}
+.hero h1{font-size:2.3rem;line-height:1.15;margin:0 0 12px}
+.hero h1 span{color:var(--cu)}
+.hero p{font-size:1.08rem;color:#4a3a2c;margin:0 0 10px}
+.en{color:var(--mute);font-size:.95rem}
+.btn{display:inline-block;margin:10px 10px 0 0;padding:12px 20px;background:var(--cu);color:#fff;border-radius:10px;text-decoration:none;font-weight:600}
+.btn.alt{background:#fff;color:var(--cu);border:2px solid var(--cu)}
+.soon{display:inline-block;margin-top:10px;padding:5px 12px;border-radius:999px;background:var(--sand);color:#6b4a30;font-size:.88rem}
+.art{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px}
+.art svg{display:block;width:100%;height:auto}
+section{padding:34px 0}
+h2{font-size:1.55rem;margin:0 0 6px;color:var(--cu)}
+.lead{color:#4a3a2c;margin:0 0 20px;max-width:700px}
+.grid{display:grid;gap:14px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.card h3{margin:8px 0 2px;font-size:1.02rem}
+.card p{margin:0;color:#4a3a2c;font-size:.93rem}
+.card svg{display:block;width:100%;height:auto;border-radius:10px}
+.num{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--cu);color:#fff;align-items:center;justify-content:center;font-weight:700}
+.band{background:var(--sand);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:.93rem;background:#fff;border-radius:10px;overflow:hidden}
+th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left}
+th{background:var(--sand)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+ul.tick{list-style:none;padding:0;margin:0}
+ul.tick li{padding:4px 0 4px 26px;position:relative}
+ul.tick li:before{content:"✓";position:absolute;left:0;color:var(--cu);font-weight:800}
+footer{background:var(--ink);color:#e9dccd;padding:26px 0;margin-top:30px;font-size:.93rem}
+footer a{color:#e9b98d}
+@media(max-width:760px){.hero,.two{grid-template-columns:1fr}.g3,.g4{grid-template-columns:1fr 1fr}.hero h1{font-size:1.8rem}nav a{margin-left:10px}}
+@media(max-width:430px){.g3,.g4{grid-template-columns:1fr}}
+.art img{display:block;width:100%;height:auto;border-radius:10px}.cap{margin:6px 4px 0;font-size:.85rem;color:var(--mute);text-align:center}.card img{display:block;width:100%;height:210px;object-fit:contain;background:var(--sand);border-radius:10px}.art.phone{max-width:340px;margin:0 auto}
+.art{position:relative;background:linear-gradient(160deg,#fff,#f3e7d8);padding:14px;border-radius:18px;box-shadow:0 30px 60px -20px rgba(80,45,20,.45),0 8px 18px rgba(80,45,20,.15)}
+.art::before{content:"";position:absolute;inset:-30px -20px auto auto;width:70%;height:70%;background:radial-gradient(circle,rgba(206,146,86,.35),transparent 70%);z-index:-1}
+.art img{box-shadow:inset 0 0 0 1px rgba(0,0,0,.06),0 2px 6px rgba(0,0,0,.15)}
+.card{transition:transform .25s,box-shadow .25s;box-shadow:0 10px 24px -12px rgba(80,45,20,.35)}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -16px rgba(80,45,20,.5)}
+.card img{background:radial-gradient(circle at 50% 35%,#fff,#e9d9c4);box-shadow:inset 0 -14px 24px -14px rgba(80,45,20,.35)}
+.art.phone{background:#1d1712;padding:12px 10px;border-radius:30px;box-shadow:0 34px 60px -18px rgba(0,0,0,.6),inset 0 0 0 2px #3a2f27}
+.art.phone img{border-radius:18px;box-shadow:none}
+.art.phone .cap{color:#e9d9c4}
 </style>
 </head>
 <body>
-<main>
-<h1>MEKSET</h1>
-<p>Mobilya ve marangoz ustaları için dolap tasarımı yapan, tüm kesim parçalarını liste halinde veren telefon uygulaması.</p>
-<p>MEKSET is a mobile app that helps cabinet makers design cabinets and get a complete cutting list.</p>
-<p><a class="btn" href="/gizlilik/">Gizlilik Politikası / Privacy Policy</a></p>
-<p>İletişim / Contact: <a href="mailto:support@mekset.com">support@mekset.com</a></p>
-</main>
+<div class="wrap">
+<header class="top">
+<a class="brand" href="/">
+<svg width="36" height="36" viewBox="0 0 100 100" role="img" aria-label="MEKSET logosu"><defs><clipPath id="c"><rect height="68" width="52" x="25" y="16"/></clipPath></defs><g clip-path="url(#c)"><rect fill="#A9692F" height="48" width="17" x="60" y="36"/><path d="M 24 8 L 52 45 L 80 8" fill="none" stroke="#CE9256" stroke-miterlimit="8" stroke-width="15"/><line stroke="#faf6f1" stroke-width="1.6" x1="52" x2="52" y1="30" y2="62"/></g><rect fill="#23252A" height="68" rx="1.2" stroke="#faf6f1" stroke-width="1.6" width="15" x="10" y="16"/><rect fill="#23252A" height="68" rx="1.2" stroke="#faf6f1" stroke-width="1.6" width="14" x="77" y="16"/></svg>
+MEKSET</a>
+<nav><a href="#modeller">Dolaplar</a><a href="#mutfak">Örnek mutfak</a><a href="#nasil">Nasıl çalışır</a><a href="/kilavuz/">Kılavuz</a></nav>
+</header>
+
+<div class="hero">
+<div>
+<h1>Dolabı çiz, <span>kesim listesi</span> hazır.</h1>
+<p>MEKSET, mobilya ve marangoz ustaları için dolap yapımını kolaylaştıran bir telefon uygulamasıdır. Duvar ölçüsünü yazarsınız, dolapları yerleştirirsiniz; program her parçanın ölçüsünü, adedini ve kenar bandını liste halinde verir.</p>
+<p class="en">MEKSET is a mobile app for cabinet makers: enter the wall size, place the cabinets, and get a complete cutting list.</p>
+<a class="btn" href="/kilavuz/">Kullanım Kılavuzu</a><a class="btn alt" href="#nasil">Nasıl çalışır?</a><br>
+<span class="soon">Google Play'de yakında · Coming soon on Google Play</span>
+</div>
+<div class="art"><img src="/img/mutfak.jpg" alt="MEKSET ile hazırlanmış L şeklinde örnek mutfak" width="1600" height="713"><p class="cap">MEKSET uygulamasından örnek mutfak</p>
+</div>
+</div>
+</div>
+
+<section class="band"><div class="wrap">
+<div class="grid g4" style="text-align:center">
+<div><b style="font-size:1.8rem;color:var(--cu)">3</b><br>adımda iş: Ayarlar · Yapım · Üretim</div>
+<div><b style="font-size:1.8rem;color:var(--cu)">15+</b><br>hazır dolap çeşidi</div>
+<div><b style="font-size:1.8rem;color:var(--cu)">0</b><br>reklam, hesap açma yok</div>
+<div><b style="font-size:1.8rem;color:var(--cu)">mm · cm · inç</b><br>ölçü birimi seçimi</div>
+</div>
+</div></section>
+
+<section id="neden"><div class="wrap">
+<h2>Usta için, sade ve net</h2>
+<p class="lead">AutoCAD gibi karmaşık değil. Ölçüyü yazarsınız, dolap duvara oturur, parça listesi çıkar. Her şey telefonunuzda.</p>
+<div class="grid g3">
+<div class="card"><h3>📐 Ölçü hatasına karşı</h3><p>Parçaların ölçüsü sizin seçtiğiniz malzeme kalınlığı, arka panel, kenar bandı ve kapak aralığı ile hesaplanır. Ölçüler bitmiş ölçü olarak verilir.</p></div>
+<div class="card"><h3>♻️ Az fire</h3><p>Kesim planı parçaları plakaya dizer; plaka sayısını, doluluğu ve kalan artığı gösterir.</p></div>
+<div class="card"><h3>💰 Maliyet ve teklif</h3><p>Plaka, bant, hırdavat fiyatınızı bir kez girin. İşçilik, kâr ve KDV ile müşteriye PDF teklif hazırlayın.</p></div>
+<div class="card"><h3>📤 Paylaşın</h3><p>Kesim listesini Excel, CSV, PDF olarak paylaşın ya da ebatlama atölyesine gönderin.</p></div>
+<div class="card"><h3>🔒 Verileriniz sizde</h3><p>Projeler yalnız telefonunuzda saklanır. Hesap, reklam ve takip yoktur.</p></div>
+<div class="card"><h3>🌍 Her ölçü birimi</h3><p>Milimetre, santimetre veya inç. Para birimini de siz seçersiniz.</p></div>
+</div>
+</div></section>
+
+<section id="modeller" class="band"><div class="wrap">
+<h2>Dolap modelleri</h2>
+<p class="lead">Tezgah altı, alt, üst ve boy dolap; köşe, fırın, buzdolabı ve evye dolapları hazır gelir. Hepsinin ölçüsü, kapağı ve içi değiştirilebilir.</p>
+<div class="grid g3">
+<div class="card"><img src="/img/alt-dolap.jpg" alt="Alt dolap" loading="lazy"><h3>Alt dolap</h3><p>Kapaklı, raflı veya çekmeceli; baza ve tezgah altı seçenekli.</p></div>
+<div class="card"><img src="/img/cekmeceli.jpg" alt="Çekmeceli dolap" loading="lazy"><h3>Çekmeceli dolap</h3><p>Eşit veya üstü dar çekmeceler.</p></div>
+<div class="card"><img src="/img/ust-dolap.jpg" alt="Üst dolap" loading="lazy"><h3>Üst dolap</h3><p>Taç ve ışık bandı seçenekli; kombi dolabı havalandırma yarıklı.</p></div>
+<div class="card"><img src="/img/boy-dolap.jpg" alt="Boy dolap · buzdolabı yeri" loading="lazy"><h3>Boy dolap · buzdolabı yeri</h3><p>Cihaz yeri ve üstünde kapaklı bölme.</p></div>
+<div class="card"><img src="/img/firin-yeri.jpg" alt="Fırın yeri" loading="lazy"><h3>Fırın yeri</h3><p>Altında çekmeceli tezgah altı fırın dolabı.</p></div>
+<div class="card"><img src="/img/kose-boy.jpg" alt="Köşe ve boy dolap" loading="lazy"><h3>Köşe ve boy dolap</h3><p>Boy dolap ve köşede üst dolap; bölme ve kapak seçimi.</p></div>
+</div>
+<p class="lead" style="margin-top:14px">Ayrıca: kör köşe, L köşe, evye dolabı, bulaşık makinesi yeri, yan dolaplar, ara panel ve açık raf. (Görüntüler MEKSET uygulamasından alınmıştır.)</p>
+</div></section>
+
+<section id="mutfak"><div class="wrap two">
+<div>
+<h2>Örnek mutfak</h2>
+<p class="lead">Uygulamayı açınca hazır bir L mutfak sizi bekler. Gezin, ölçülere bakın, kesim listesini görün. Ücretsiz proje hakkınızdan düşmez.</p>
+<ul class="tick">
+<li>Duvarlara oturmuş alt ve üst dolaplar</li>
+<li>Her dolabın menüsünü açıp ölçü ve kapağı değiştirin</li>
+<li>Kesim listesi ve plaka planı örnek üzerinde hazır</li>
+<li>İstediğinizde "Baştan" ile ilk haline döndürün</li>
+</ul>
+</div>
+<div class="art phone"><img src="/img/telefon.jpg" alt="MEKSET Yapım ekranı, telefon görünümü" width="640" height="578"><p class="cap">Yapım ekranı: altta Geri, Dolap, Panel, Taç Baza, FIT, Ölçü, Üretim</p></div>
+</div></section>
+
+<section id="nasil" class="band"><div class="wrap">
+<h2>Nasıl çalışır?</h2>
+<p class="lead">Üç adım: ayarla, yerleştir, listele.</p>
+<div class="grid g3">
+<div class="card"><span class="num">1</span><h3>Proje Ayarları</h3><p>Panel malzemesi, renk, kapak, kulp, menteşe, baza ve taç seçilir. Bir kez yaparsınız; yeni dolaplar bunu kullanır.</p>
+<svg viewBox="0 0 200 90" style="margin-top:8px"><g font-family="system-ui,sans-serif" font-size="10"><rect x="8" y="10" width="44" height="18" rx="9" fill="#a85a2a"/><text x="30" y="23" text-anchor="middle" fill="#fff">Gövde</text><rect x="56" y="10" width="44" height="18" rx="9" fill="#fff" stroke="#a85a2a"/><text x="78" y="23" text-anchor="middle">Kapak</text><rect x="104" y="10" width="44" height="18" rx="9" fill="#fff" stroke="#a85a2a"/><text x="126" y="23" text-anchor="middle">Alt yapı</text><rect x="152" y="10" width="38" height="18" rx="9" fill="#fff" stroke="#a85a2a"/><text x="171" y="23" text-anchor="middle">Üst</text></g><g fill="#fff" stroke="#e3d5c5"><rect x="8" y="38" width="182" height="14" rx="4"/><rect x="8" y="56" width="182" height="14" rx="4"/></g></svg></div>
+<div class="card"><span class="num">2</span><h3>Yapım</h3><p>Duvarın en ve boyunu yazın. Dolabın türünü seçin, ölçüsünü girin, yerleştirin. Kolon ve niş ekleyebilirsiniz.</p>
+<img src="/img/arac-cubugu.jpg" alt="Yapım araç çubuğu" loading="lazy" style="height:auto;margin-top:8px;background:none;border-radius:8px;border:1px solid var(--line)"></div>
+<div class="card"><span class="num">3</span><h3>Üretim</h3><p>Kesim listesi, hırdavat, fiyat ve plaka planı hazır. Paylaşın, yazdırın, kesime gönderin.</p>
+<svg viewBox="0 0 200 90" style="margin-top:8px"><g font-family="system-ui,sans-serif" font-size="9"><rect x="8" y="8" width="184" height="74" rx="6" fill="#fff" stroke="#e3d5c5"/><text x="16" y="24" font-weight="700">D1 · Alt dolap</text><text x="16" y="40">Yan (sol)</text><text x="110" y="40">720 × 560</text><text x="16" y="54">Alt tabla</text><text x="110" y="54">562 × 540</text><text x="16" y="68">Kapak</text><text x="110" y="68">716 × 596</text></g></svg></div>
+</div>
+</div></section>
+
+<section id="ozellik"><div class="wrap two">
+<div class="art">
+<table>
+<tr><th>Parça</th><th>Ölçü (mm)</th><th>Adet</th><th>Bant</th></tr>
+<tr><td>Yan</td><td>720 × 560</td><td>2</td><td>ön</td></tr>
+<tr><td>Alt tabla</td><td>562 × 540</td><td>1</td><td>ön</td></tr>
+<tr><td>Arkalık</td><td>708 × 598</td><td>1</td><td>—</td></tr>
+<tr><td>Kapak</td><td>716 × 596</td><td>1</td><td>4 kenar</td></tr>
+</table>
+<p class="en" style="margin:8px 4px 0">Örnek kesim listesi (rakamlar örnektir).</p>
+</div>
+<div>
+<h2>Kesim listesinde ne var?</h2>
+<ul class="tick">
+<li>Her parçanın uzunluk × genişlik ve kalınlığı</li>
+<li>Kenar bandı kenarları ve toplam metre</li>
+<li>Dolap dolap gruplama, dolaba göre süzme</li>
+<li>Malzeme ve damar yönü</li>
+<li>Menteşe, ray, kulp, ayak adetleri (hırdavat)</li>
+<li>Plaka planı, doluluk ve artık plaka</li>
+<li>Excel, CSV, PDF, yazdırma, ebatlamaya gönderme</li>
+</ul>
+<p><a href="/kilavuz/">Tüm menüleri kılavuzda görün ›</a></p>
+</div>
+</div></section>
+
+<section class="band"><div class="wrap" style="text-align:center">
+<h2>MEKSET'i deneyin</h2>
+<p class="lead" style="margin:0 auto 14px">Uygulama Google Play'de yayına hazırlanıyor. Sorularınız ve önerileriniz için yazın.</p>
+<span class="soon">Google Play'de yakında · Coming soon</span><br>
+<a class="btn" href="mailto:support@mekset.com">support@mekset.com</a><a class="btn alt" href="/kilavuz/">Kullanım Kılavuzu</a>
+</div></section>
+
+<footer><div class="wrap">
+<b>MEKSET</b> · Mobilya ve marangoz ustaları için dolap tasarımı ve kesim listesi<br>
+<a href="/kilavuz/">Kullanım Kılavuzu</a> · <a href="/gizlilik/">Gizlilik Politikası / Privacy Policy</a> · <a href="mailto:support@mekset.com">support@mekset.com</a><br>
+<span style="opacity:.7">© OSI App Studio</span>
+</div></footer>
 </body>
 </html>

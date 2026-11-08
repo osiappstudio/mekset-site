@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MEKSET – Kullanım Kılavuzu</title>
+<meta name="description" content="MEKSET kullanım kılavuzu: Ana sayfa, Proje Ayarları, Yapım ve Üretim menülerinin adım adım anlatımı.">
+<style>
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:#faf6f1;color:#2b2118;line-height:1.65}
+main{max-width:800px;margin:0 auto;padding:32px 18px 90px}
+h1{color:#a85a2a;margin:0 0 6px}
+h2{color:#a85a2a;margin:48px 0 8px;font-size:1.45rem;border-top:1px solid #d8c8b8;padding-top:22px}
+h3{margin:28px 0 6px;font-size:1.1rem}
+h4{margin:18px 0 4px;font-size:1rem;color:#6b4a30}
+a{color:#a85a2a}
+p{margin:8px 0}
+ul,ol{margin:8px 0;padding-left:22px}
+li{margin:3px 0}
+.d{color:#7a6a5a;font-size:.92rem}
+.toc{background:#fff;border:1px solid #e3d5c5;border-radius:10px;padding:12px 18px;margin:18px 0}
+.toc ol{columns:2;column-gap:28px;margin:4px 0}
+.fig{margin:14px 0;background:#fff;border:1px solid #e3d5c5;border-radius:10px;padding:10px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{font-size:.85rem;color:#7a6a5a;text-align:center;margin-top:4px}
+.note{background:#f3e7d8;border-left:4px solid #a85a2a;padding:8px 12px;border-radius:6px;margin:12px 0;font-size:.95rem}
+.warn{background:#fbe9e3;border-left:4px solid #b3452a;padding:8px 12px;border-radius:6px;margin:12px 0;font-size:.95rem}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:.95rem;background:#fff}
+th,td{border:1px solid #e3d5c5;padding:6px 9px;text-align:left;vertical-align:top}
+th{background:#f3e7d8}
+b.k{background:#a85a2a;color:#fff;border-radius:5px;padding:0 6px;font-weight:600;font-size:.9em;white-space:nowrap}
+.back{display:inline-block;margin-bottom:10px}
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="/">‹ MEKSET</a>
+<h1>MEKSET Kullanım Kılavuzu</h1>
+<p class="d">Son güncelleme: 8 Kasım 2026 · Her bölüm uygulamadaki menü sırasını izler. Çizimler basit şemalardır; telefonunuzdaki ekran biraz farklı görünebilir.</p>
+
+<div class="toc">
+<b>İçindekiler</b>
+<ol>
+<li><a href="#genel">MEKSET nasıl çalışır?</a></li>
+<li><a href="#ana">Ana sayfa</a></li>
+<li><a href="#projeler">Projeler ve Arşiv</a></li>
+<li><a href="#ayarlar">Ayarlar</a></li>
+<li><a href="#tus">Rakam tuş takımı</a></li>
+<li><a href="#proje-ayar">Proje Ayarları</a></li>
+<li><a href="#yapim">Yapım</a></li>
+<li><a href="#dolap">Dolap ekleme ve dolap menüsü</a></li>
+<li><a href="#turler">Dolap türleri</a></li>
+<li><a href="#bosluk">Boşluk, dolgu, yan kapama</a></li>
+<li><a href="#panel">Panel ve raf</a></li>
+<li><a href="#tac">Taç, Işık, Baza</a></li>
+<li><a href="#olcu">FIT, Ölçü, Kolon ve Niş</a></li>
+<li><a href="#uretim">Üretim</a></li>
+<li><a href="#ipuclari">İpuçları</a></li>
+</ol>
+</div>
+
+<h2 id="genel">1. MEKSET nasıl çalışır?</h2>
+<p>Üç adım vardır, her zaman bu sırayla ilerlersiniz:</p>
+<figure class="fig">
+<svg viewBox="0 0 640 110" role="img" aria-label="Proje Ayarları, Yapım, Üretim adımları">
+<g font-family="system-ui,sans-serif" font-size="15" text-anchor="middle">
+<rect x="10" y="20" width="170" height="64" rx="10" fill="#f3e7d8" stroke="#a85a2a"/>
+<text x="95" y="48" font-weight="700" fill="#2b2118">Proje Ayarları</text><text x="95" y="68" font-size="12" fill="#7a6a5a">malzeme, kapak, baza</text>
+<path d="M186 52h50" stroke="#a85a2a" stroke-width="3"/><path d="M236 52l-9-7v14z" fill="#a85a2a"/>
+<rect x="240" y="20" width="170" height="64" rx="10" fill="#f3e7d8" stroke="#a85a2a"/>
+<text x="325" y="48" font-weight="700" fill="#2b2118">Yapım</text><text x="325" y="68" font-size="12" fill="#7a6a5a">duvar ölçüsü, dolaplar</text>
+<path d="M416 52h50" stroke="#a85a2a" stroke-width="3"/><path d="M466 52l-9-7v14z" fill="#a85a2a"/>
+<rect x="470" y="20" width="160" height="64" rx="10" fill="#a85a2a"/>
+<text x="550" y="48" font-weight="700" fill="#fff">Üretim</text><text x="550" y="68" font-size="12" fill="#f7e6d6">kesim listesi, fiyat</text>
+</g></svg>
+<figcaption>Önce ayarlar, sonra dolapları yerleştirme, en sonda kesim listesi.</figcaption>
+</figure>
+<ul>
+<li><b>Proje Ayarları:</b> Malzeme, renk, kapak, baza gibi seçimleri bir kez yaparsınız. Yeni eklediğiniz dolaplar bu seçimleri kullanır.</li>
+<li><b>Yapım:</b> Duvar ölçüsünü girer, dolapları duvara yerleştirirsiniz.</li>
+<li><b>Üretim:</b> Program her parçanın ölçüsünü, adedini ve kenar bandını listeler; hırdavat, plaka planı ve teklif de buradadır.</li>
+</ul>
+<div class="note">Programın içinde hesap hep milimetre ile yapılır. Ayarlar'dan cm veya inç seçerseniz yalnızca yazılış değişir.</div>
+
+<h2 id="ana">2. Ana sayfa</h2>
+<figure class="fig">
+<svg viewBox="0 0 640 300" role="img" aria-label="Ana sayfa şeması">
+<g font-family="system-ui,sans-serif" font-size="13">
+<rect x="150" y="6" width="340" height="288" rx="16" fill="#fff" stroke="#bfae9b" stroke-width="2"/>
+<rect x="166" y="18" width="22" height="22" rx="5" fill="#a85a2a"/><text x="196" y="35" font-weight="700" font-size="15" fill="#2b2118">MEKSET</text>
+<circle cx="466" cy="29" r="11" fill="none" stroke="#7a6a5a" stroke-width="2"/><text x="466" y="34" text-anchor="middle" font-size="13" fill="#7a6a5a">⚙</text>
+<rect x="166" y="52" width="308" height="86" rx="10" fill="#ecd9c3"/>
+<rect x="190" y="66" width="60" height="32" fill="#f5f3ed" stroke="#8f8472"/><rect x="254" y="66" width="60" height="32" fill="#f5f3ed" stroke="#8f8472"/><rect x="190" y="104" width="124" height="26" fill="#d9c4a3" stroke="#8f8472"/>
+<text x="340" y="86" font-weight="700" fill="#2b2118">SON PROJE</text><text x="340" y="104" font-size="12" fill="#7a6a5a">proje adı · dolap sayısı</text>
+<rect x="378" y="108" width="86" height="24" rx="6" fill="#a85a2a"/><text x="421" y="125" text-anchor="middle" fill="#fff" font-size="12">Devam et</text>
+<rect x="166" y="148" width="308" height="30" rx="8" fill="#a85a2a"/><text x="320" y="168" text-anchor="middle" fill="#fff" font-weight="700">Yeni proje</text>
+<text x="166" y="198" font-weight="700" fill="#2b2118">Öğren · 5 kısa ders</text>
+<g fill="#f3e7d8" stroke="#a85a2a"><rect x="166" y="206" width="56" height="34" rx="6"/><rect x="226" y="206" width="56" height="34" rx="6"/><rect x="286" y="206" width="56" height="34" rx="6"/><rect x="346" y="206" width="56" height="34" rx="6"/><rect x="406" y="206" width="56" height="34" rx="6"/></g>
+<text x="166" y="262" font-weight="700" fill="#2b2118">Son projeler</text><text x="400" y="262" fill="#a85a2a" font-size="12">Projelerim · Arşiv ›</text>
+<rect x="166" y="268" width="70" height="20" rx="4" fill="#f3e7d8"/><rect x="242" y="268" width="70" height="20" rx="4" fill="#f3e7d8"/><rect x="318" y="268" width="70" height="20" rx="4" fill="#f3e7d8"/>
+</g></svg>
+<figcaption>Ana sayfa: üstte logo ve Ayarlar dişlisi, ortada son proje, altta Yeni proje ve dersler.</figcaption>
+</figure>
+<table>
+<tr><th>Öğe</th><th>Ne işe yarar?</th></tr>
+<tr><td>Dişli simgesi</td><td>Ayarlar ekranını açar.</td></tr>
+<tr><td>Son proje kartı</td><td>En son açtığınız projeyi gösterir. <b class="k">Devam et</b> ile kaldığınız yerden açılır.</td></tr>
+<tr><td>Örnek mutfak</td><td>Hiç projeniz yokken kartta <b class="k">Örnek mutfağa bak</b> çıkar. Örnek mutfağı gezebilir, ölçülere ve kesim listesine bakabilirsiniz; ücretsiz proje hakkınızdan düşmez. Projeniz varsa sağdaki küçük kartta <b class="k">Aç</b> ve <b class="k">Baştan</b> düğmeleri bulunur (Baştan: örneği ilk haline döndürür).</td></tr>
+<tr><td><b class="k">Yeni proje</b></td><td>Boş bir proje açar ve sizi Proje Ayarları'na götürür.</td></tr>
+<tr><td>Öğren</td><td>Beş kısa ders: Proje ayarları, Yapım, Kesim, Üretim, Arşiv. Bir karta dokununca ekranda balonlu kısa bir gezi başlar.</td></tr>
+<tr><td>Ücretsiz · N proje hakkı / Pro'ya geç</td><td>Ücretsiz planınızdaki proje hakkını gösterir. Pro'ya geçince sınırsız proje açılır.</td></tr>
+<tr><td>Son projeler</td><td>Önceki projelerinizin küçük kartları. Daha fazlası için <b class="k">Projelerim · Arşiv ›</b>.</td></tr>
+</table>
+
+<h2 id="projeler">3. Projeler ve Arşiv</h2>
+<p>Ana sayfadan <b class="k">Projelerim · Arşiv ›</b> ile açılır. Başlıkta geri oku (‹) ve <b class="k">Dosyadan aç</b> düğmesi vardır.</p>
+<figure class="fig">
+<svg viewBox="0 0 640 210" role="img" aria-label="Projeler ekranı">
+<g font-family="system-ui,sans-serif" font-size="13">
+<rect x="120" y="6" width="400" height="198" rx="14" fill="#fff" stroke="#bfae9b" stroke-width="2"/>
+<text x="140" y="32" font-size="18" fill="#a85a2a">‹</text><text x="164" y="32" font-weight="700" font-size="15">Projeler</text>
+<rect x="420" y="16" width="86" height="22" rx="6" fill="#f3e7d8" stroke="#a85a2a"/><text x="463" y="31" text-anchor="middle" font-size="11">Dosyadan aç</text>
+<rect x="138" y="48" width="110" height="26" rx="13" fill="#a85a2a"/><text x="193" y="66" text-anchor="middle" fill="#fff">Aktif · 3</text>
+<rect x="254" y="48" width="110" height="26" rx="13" fill="#f3e7d8"/><text x="309" y="66" text-anchor="middle">Arşiv · 1</text>
+<rect x="138" y="82" width="364" height="26" rx="6" fill="#faf6f1" stroke="#d8c8b8"/><text x="150" y="100" fill="#7a6a5a">Proje veya müşteri ara</text>
+<g fill="#f3e7d8" stroke="#bfae9b"><rect x="138" y="118" width="172" height="72" rx="8"/><rect x="330" y="118" width="172" height="72" rx="8"/></g>
+<text x="150" y="168" font-weight="700">Mutfak – Yılmaz</text><text x="480" y="140" font-size="18" fill="#7a6a5a">⋯</text>
+</g></svg>
+<figcaption>Aktif ve Arşiv sekmeleri, arama kutusu, proje kartları ve her kartta ⋯ menüsü.</figcaption>
+</figure>
+<ul>
+<li><b>Karta dokunmak</b> projeyi açar.</li>
+<li><b>Arama kutusu</b> proje adına veya müşteri adına göre süzer.</li>
+<li><b>⋯ menüsü</b> (aktif projelerde): <b class="k">Kopyasını al</b>, <b class="k">Gönder (dosya olarak)</b>, <b class="k">Arşive kaldır</b>.</li>
+<li><b>Arşiv sekmesi:</b> Kartlarda <b class="k">Geri al</b> (aktif listeye döner) ve <b class="k">Sil</b> bulunur. Silmeden önce bir onay sorulur; silinen proje geri gelmez. Ücretsiz planda silmek proje hakkınızı geri vermez.</li>
+<li><b>Gönder:</b> Projeyi <code>.mekset</code> dosyası olarak paylaşır. Yedek almak veya başka telefona yollamak için kullanın.</li>
+<li><b>Dosyadan aç:</b> Bir <code>.mekset</code> dosyası seçersiniz; "Bu proje eklensin mi?" sorusuna evet derseniz dosya listenize <b>yeni proje</b> olarak eklenir. Telefondaki diğer projeler değişmez.</li>
+</ul>
+
+<h2 id="ayarlar">4. Ayarlar</h2>
+<p>Ana sayfadaki dişliden açılır. Geri oku ile çıkılır.</p>
+<table>
+<tr><th>Bölüm</th><th>İçerik</th></tr>
+<tr><td>ÖLÇÜ, PARA, DİL</td><td><b>Ölçü birimi:</b> mm, cm veya inç. İlk açılışta telefonunuzun ülkesine göre kendiliğinden seçilir. Kayıtlı projeler etkilenmez.<br><b>Para birimi:</b> satıra dokununca liste açılır (ABD doları, Euro, Sterlin, Türk lirası, Real, Diğer). Döviz çevirme yoktur; fiyatlar ve teklif seçtiğiniz birimde olur.<br><b>Dil:</b> şimdilik Türkçe.</td></tr>
+<tr><td>PLAN</td><td>Ücretsiz plandaki proje hakkınızı gösterir. <b class="k">Pro'ya geç</b> ile Pro bilgi ekranı açılır; ödeme Google Play üzerinden yapılır.</td></tr>
+<tr><td>YARDIM</td><td><b>Rehberi tekrar göster:</b> ilk açılıştaki kısa rehberi yeniden başlatır.</td></tr>
+<tr><td>GERİ BİLDİRİM</td><td><b>Hata bildir:</b> e-posta uygulamanızı hazır bir mesajla açar; varsa hata kaydı mesaja eklenir. Göndermek sizin kararınızdır.</td></tr>
+<tr><td>HATA KAYDI</td><td>Bir hata olduysa kaydı burada görürsünüz; <b class="k">Kaydı temizle</b> ile silinir.</td></tr>
+</table>
+
+<h2 id="tus">5. Rakam tuş takımı</h2>
+<p>MEKSET'te ölçü yazarken telefonun klavyesi açılmaz; kendi büyük rakam tuş takımı çıkar. Proje Ayarları'nda ve Yapım'da aynıdır.</p>
+<figure class="fig">
+<svg viewBox="0 0 420 250" role="img" aria-label="Rakam tuş takımı">
+<g font-family="system-ui,sans-serif" font-size="20" text-anchor="middle">
+<rect x="110" y="6" width="200" height="40" rx="8" fill="#faf6f1" stroke="#d8c8b8"/><text x="290" y="34" text-anchor="end" font-size="22" fill="#2b2118">560 <tspan font-size="13" fill="#7a6a5a">mm</tspan></text>
+<g fill="#f3e7d8" stroke="#a85a2a">
+<rect x="110" y="56" width="62" height="40" rx="8"/><rect x="179" y="56" width="62" height="40" rx="8"/><rect x="248" y="56" width="62" height="40" rx="8"/>
+<rect x="110" y="102" width="62" height="40" rx="8"/><rect x="179" y="102" width="62" height="40" rx="8"/><rect x="248" y="102" width="62" height="40" rx="8"/>
+<rect x="110" y="148" width="62" height="40" rx="8"/><rect x="179" y="148" width="62" height="40" rx="8"/><rect x="248" y="148" width="62" height="40" rx="8"/>
+<rect x="110" y="194" width="62" height="40" rx="8"/><rect x="179" y="194" width="62" height="40" rx="8"/>
+</g>
+<rect x="248" y="194" width="62" height="40" rx="8" fill="#a85a2a"/>
+<g fill="#2b2118"><text x="141" y="84">7</text><text x="210" y="84">8</text><text x="279" y="84">9</text><text x="141" y="130">4</text><text x="210" y="130">5</text><text x="279" y="130">6</text><text x="141" y="176">1</text><text x="210" y="176">2</text><text x="279" y="176">3</text><text x="141" y="222">,</text><text x="210" y="222">0</text></g>
+<text x="279" y="222" fill="#fff" font-size="15">Tamam</text>
+<text x="338" y="84" font-size="13" fill="#7a6a5a" text-anchor="start">← Sil (⌫)</text>
+<text x="338" y="130" font-size="13" fill="#7a6a5a" text-anchor="start">← Vazgeç</text>
+</g></svg>
+<figcaption>Üstte yazdığınız değer, altında rakamlar. Sağ sütunda Sil ve Vazgeç; en altta büyük Tamam.</figcaption>
+</figure>
+<ul>
+<li>Ondalık için virgül kullanılır.</li>
+<li>Birden çok kutu arka arkaya doldurulurken büyük tuşun yazısı <b class="k">İleri ›</b> olur; son kutuda <b class="k">Tamam</b> (yeni dolap eklenirken <b class="k">YERLEŞTİR</b>) olur.</li>
+<li>Geçersiz değer girerseniz tuş takımının üstünde kırmızı bir uyarı çıkar ve kutu kapanmaz.</li>
+</ul>
+
+<h2 id="proje-ayar">6. Proje Ayarları</h2>
+<p>Yeni proje açınca önce bu ekran gelir. Burada yaptığınız seçimler <b>yeni eklediğiniz dolaplara</b> uygulanır.</p>
+<figure class="fig">
+<svg viewBox="0 0 640 290" role="img" aria-label="Proje Ayarları şeması">
+<g font-family="system-ui,sans-serif" font-size="13">
+<rect x="120" y="6" width="400" height="278" rx="14" fill="#fff" stroke="#bfae9b" stroke-width="2"/>
+<text x="140" y="32" font-weight="700">Proje Adı</text><rect x="140" y="38" width="170" height="24" rx="5" fill="#faf6f1" stroke="#d8c8b8"/><rect x="320" y="38" width="180" height="24" rx="5" fill="#faf6f1" stroke="#d8c8b8"/><text x="326" y="54" fill="#7a6a5a">Müşteri</text>
+<rect x="140" y="68" width="360" height="22" rx="5" fill="#faf6f1" stroke="#d8c8b8"/><text x="148" y="83" fill="#7a6a5a" font-size="12">Açıklama (isteğe bağlı)</text>
+<g text-anchor="middle"><rect x="140" y="100" width="84" height="30" rx="8" fill="#a85a2a"/><text x="182" y="120" fill="#fff">Gövde</text>
+<rect x="230" y="100" width="84" height="30" rx="8" fill="#f3e7d8"/><text x="272" y="120">Kapak</text>
+<rect x="320" y="100" width="84" height="30" rx="8" fill="#f3e7d8"/><text x="362" y="120">Alt yapı</text>
+<rect x="410" y="100" width="90" height="30" rx="8" fill="#f3e7d8"/><text x="455" y="120">Üst</text></g>
+<g><rect x="140" y="140" width="360" height="30" rx="6" fill="#faf6f1" stroke="#e3d5c5"/><circle cx="154" cy="155" r="5" fill="#4c9a5a"/><text x="168" y="159">Panel malzemesi</text><text x="490" y="159" text-anchor="end" fill="#7a6a5a">Suntalam 18 mm ›</text>
+<rect x="140" y="176" width="360" height="30" rx="6" fill="#faf6f1" stroke="#e3d5c5"/><circle cx="154" cy="191" r="5" fill="#9a9a9a"/><text x="168" y="195">Renk / yüzey</text><text x="490" y="195" text-anchor="end" fill="#7a6a5a">Açık meşe ›</text>
+<rect x="140" y="212" width="360" height="30" rx="6" fill="#faf6f1" stroke="#e3d5c5"/><circle cx="154" cy="227" r="5" fill="#4c9a5a"/><text x="168" y="231">Arka panel</text><text x="490" y="231" text-anchor="end" fill="#7a6a5a">MDF 8 mm · Çakma ›</text></g>
+<circle cx="146" cy="262" r="4" fill="#4c9a5a"/><text x="154" y="266" font-size="11">Üretime gider</text><circle cx="232" cy="262" r="4" fill="#9a9a9a"/><text x="240" y="266" font-size="11">Üretimde yok</text><circle cx="322" cy="262" r="4" fill="#e08a2a"/><text x="330" y="266" font-size="11">Yeni</text>
+<rect x="400" y="250" width="100" height="26" rx="8" fill="#a85a2a"/><text x="450" y="268" text-anchor="middle" fill="#fff" font-size="12">Yapıma geç ›</text>
+</g></svg>
+<figcaption>Üstte proje bilgileri, altında dört sekme ve her sekmede satırlar. Satıra dokununca seçenekleri aynı yerde açılır.</figcaption>
+</figure>
+<h3>Ekranın bölümleri</h3>
+<ul>
+<li><b>Proje adı, Müşteri, Açıklama:</b> sayfanın üstünde hep açıktır. Yapım'a geçmek için proje adı ve müşteri gerekir.</li>
+<li><b>Dört sekme:</b> Gövde · Kapak · Alt yapı · Üst.</li>
+<li><b>Satırlar:</b> Soldaki renkli nokta ve sağdaki özet değer bulunur. Dokununca satırın seçenekleri açılır; ölçü kutusuna dokunursanız <a href="#tus">tuş takımı</a> çıkar.</li>
+<li><b>Noktalar:</b> yeşil = <i>Üretime gider</i> (kesim listesini etkiler), gri = <i>Üretimde yok</i> (yalnız görünüm), turuncu = <i>Yeni</i>.</li>
+<li><b class="k">Yapıma geç ›</b> sizi Yapım'a götürür.</li>
+</ul>
+
+<h3>Gövde sekmesi</h3>
+<table>
+<tr><th>Satır</th><th>Seçenekler ve anlamı</th></tr>
+<tr><td>Panel malzemesi</td><td>Suntalam · MDF · Kontrplak · Masif · Diğer. Altında <b>Kalınlık</b> kutusu.</td></tr>
+<tr><td>Renk / yüzey</td><td>Renk kutularından seçilir. Tek renkler: Orijinal, Mat beyaz, Parlak beyaz, Mat krem, Açık meşe, Grej, Vizon, Adaçayı, Antrasit, Koyu ahşap. İki renkli (üst dolaplar ilk renk, alt ve boy dolaplar ikinci renk): Beyaz / Açık meşe, Beyaz / Koyu ahşap, Krem / Adaçayı, Krem / Antrasit, Parlak beyaz / Antrasit, Grej / Vizon. <i>Orijinal</i> seçilirse gövde ahşap, kapak bej olur; diğer tek renklerde gövde ve kapak aynı renktir. Bu satır yalnız görünümü etkiler.</td></tr>
+<tr><td>Arka panel</td><td>Malzeme: Suntalam · MDF · Duralit. <b>Kalınlık</b>. Takma şekli: <b>Çakma</b> (arkalık her kenardan <i>Kenardan pay</i> kadar küçük kesilir) veya <b>Kanallı</b> (arkalık kanala girer; <i>Kanal derinliği</i> girilir, 1 mm oynama payı bırakılır).</td></tr>
+<tr><td>Kenar bandı</td><td>PVC ve <b>Kalınlık</b> kutusu.</td></tr>
+<tr><td>Raf önden geri</td><td>Rafların dolabın önünden ne kadar geride kesileceği; raf kapağa ve menteşeye çarpmaz.</td></tr>
+<tr><td>Kuşak genişliği</td><td>Tezgah altı dolapların ön ve arka kuşak genişliği. 60–200 mm arası olmalıdır.</td></tr>
+<tr><td>Menteşe dikmesi genişliği</td><td>Boy dolapta ve yan yana bölünen (Böl) dolapta <i>Menteşe dikmesi: Ekle</i> seçilince kesilen dikmenin genişliği. Hazır değer 100 mm; 70 mm kullanıyorsanız değiştirin. 60–200 mm arası.</td></tr>
+</table>
+
+<h3>Kapak sekmesi</h3>
+<figure class="fig">
+<svg viewBox="0 0 640 130" role="img" aria-label="Kapak görünümleri">
+<g font-family="system-ui,sans-serif" font-size="13" text-anchor="middle">
+<rect x="40" y="10" width="100" height="84" rx="3" fill="#ede9e1" stroke="#7a746c" stroke-width="2"/><text x="90" y="116">Düz</text>
+<rect x="190" y="10" width="100" height="84" rx="3" fill="#ede9e1" stroke="#7a746c" stroke-width="2"/><rect x="204" y="24" width="72" height="56" fill="#ddd6ca" stroke="#7a746c"/><text x="240" y="116">Çerçeveli</text>
+<rect x="340" y="10" width="100" height="84" rx="3" fill="#ede9e1" stroke="#7a746c" stroke-width="2"/><rect x="348" y="18" width="84" height="68" fill="none" stroke="#7a746c"/><text x="390" y="116">İnce çerçeve</text>
+<rect x="490" y="10" width="100" height="84" rx="3" fill="#ede9e1" stroke="#7a746c" stroke-width="2"/><path d="M505 10v84M520 10v84M535 10v84M550 10v84M565 10v84M580 10v84" stroke="#a39c92"/><text x="540" y="116">Dikey çizgili</text>
+</g></svg>
+<figcaption>Kapak görünümleri. Hepsi yalnız görünüştür; üretimde kapak her zaman tek parça düz kapaktır, ölçü aynıdır.</figcaption>
+</figure>
+<table>
+<tr><th>Satır</th><th>Seçenekler ve anlamı</th></tr>
+<tr><td>Kapak görünümü</td><td>Düz · Çerçeveli · İnce çerçeve · Dikey çizgili (şekle bakın).</td></tr>
+<tr><td>Kapak aralığı</td><td>2 / 4 / 2 mm · 1,5 / 3 / 1,5 mm · Özel. Üç sayı sırasıyla kenar boşluğu, kapaklar arası, kenar boşluğu demektir. <b>Özel</b> seçilince iki kutu çıkar: <i>Kenar boşluğu</i> ve <i>Kapaklar arası</i>. Üretim şimdilik kapaklar arasını kenar boşluğunun 2 katı keser; farklı girerseniz uyarı çıkar ve kesim listesi çıkmaz.</td></tr>
+<tr><td>Kulp</td><td>Standart uzun · Düğme · Kulpsuz. Adet kendiliğinden hesaplanır: her kapak ve çekmece için 1.</td></tr>
+<tr><td>Menteşe</td><td>Standart veya Frenli. Adet kapak yüksekliğine göre kendiliğinden hesaplanır: 900 mm'ye kadar 2, 1600'e kadar 3, 2000'e kadar 4, üstü 5 (kapak 600 mm'den genişse +1).</td></tr>
+<tr><td>Klapa pistonu</td><td>1 adet veya 2 adet. Yukarı açılan (klapa) her kapak için gaz pistonu adedi; Üst dolap, Yan üst ve buzdolabı üst kapağında geçerlidir.</td></tr>
+<tr><td>Çekmece rayı</td><td>Standart.</td></tr>
+</table>
+
+<h3>Alt yapı sekmesi</h3>
+<figure class="fig">
+<svg viewBox="0 0 420 170" role="img" aria-label="Baza yandan görünüş">
+<g font-family="system-ui,sans-serif" font-size="12">
+<rect x="60" y="10" width="220" height="100" fill="#d9c4a3" stroke="#7a6a55" stroke-width="2"/>
+<rect x="280" y="10" width="10" height="100" fill="#ede9e1" stroke="#7a6a55"/>
+<rect x="70" y="110" width="200" height="34" fill="#b89a6e" stroke="#7a6a55"/>
+<text x="170" y="64" text-anchor="middle">dolap gövdesi</text><text x="300" y="64" fill="#7a6a5a">kapak</text>
+<path d="M270 156h20" stroke="#a85a2a" stroke-width="2"/><path d="M270 150v12M290 150v12" stroke="#a85a2a"/>
+<text x="280" y="168" text-anchor="middle" fill="#a85a2a">geri çekme</text>
+<path d="M44 110v34" stroke="#a85a2a" stroke-width="2"/><path d="M38 110h12M38 144h12" stroke="#a85a2a"/><text x="40" y="132" text-anchor="end" fill="#a85a2a">baza</text>
+<path d="M20 146h300" stroke="#7a6a5a"/>
+</g></svg>
+<figcaption>Dolabı yandan görüyorsunuz: baza dolabın önünden "geri çekme" kadar içeridedir.</figcaption>
+</figure>
+<table>
+<tr><th>Satır</th><th>Anlamı</th></tr>
+<tr><td>Baza yüksekliği</td><td>Zeminden dolap gövdesine kadar olan yükseklik. Ayak yüksekliği buradan gelir.</td></tr>
+<tr><td>Baza geri çekme</td><td>Bazanın dolap kutusunun önünden ne kadar içeride durduğu. 0 yazarsanız baza kutuyla aynı hizada olur (kapak 18 mm önde kalır). Hazır değer 65 mm.</td></tr>
+<tr><td>Ayak</td><td>Ayarlı ayak. Baza yüksekliğini değiştirince ayak da aynı yüksekliğe gelir.</td></tr>
+</table>
+
+<h3>Üst sekmesi</h3>
+<table>
+<tr><th>Satır</th><th>Seçenekler</th></tr>
+<tr><td>Taç</td><td>Olmasın · Düz taç · Kademeli taç · Klasik taç. Seçince <b>Yükseklik</b> kutusu çıkar. Taç üst dolap dizisinin <b>üstüne</b> eklenir.</td></tr>
+<tr><td>Işık bandı</td><td>Olmasın · Düz ışık bandı · Yuvarlak ışık bandı · Pahlı ışık bandı. Seçince <b>Yükseklik</b> kutusu çıkar. Işık bandı üst dolap dizisinin <b>altına</b> eklenir.</td></tr>
+</table>
+<div class="note">Fiyatlar Proje Ayarları'nda değil, <b>Üretim › Fiyat</b> sekmesinde girilir.</div>
+
+<h2 id="yapim">7. Yapım</h2>
+<h3>7.1 Dolap alanı (duvar ölçüsü)</h3>
+<p>Yapım'a ilk girişte <b>DOLAP ALANI</b> formu gelir. Önce duvarın ölçüsünü girersiniz.</p>
+<figure class="fig">
+<svg viewBox="0 0 640 230" role="img" aria-label="Dolap alanı formu ve oda şekilleri">
+<g font-family="system-ui,sans-serif" font-size="13" text-anchor="middle">
+<rect x="20" y="10" width="270" height="210" rx="12" fill="#fff" stroke="#bfae9b" stroke-width="2"/>
+<text x="40" y="38" text-anchor="start" font-weight="700">DOLAP ALANI</text>
+<rect x="150" y="22" width="60" height="24" rx="12" fill="#a85a2a"/><text x="180" y="39" fill="#fff">DÜZ</text><rect x="214" y="22" width="64" height="24" rx="12" fill="#f3e7d8"/><text x="246" y="39">KÖŞE</text>
+<text x="40" y="76" text-anchor="start">EN</text><rect x="90" y="60" width="180" height="26" rx="5" fill="#faf6f1" stroke="#d8c8b8"/><text x="262" y="78" text-anchor="end" fill="#7a6a5a">mm</text>
+<text x="40" y="112" text-anchor="start">BOY</text><rect x="90" y="96" width="180" height="26" rx="5" fill="#faf6f1" stroke="#d8c8b8"/><text x="262" y="114" text-anchor="end" fill="#7a6a5a">mm</text>
+<rect x="150" y="170" width="120" height="34" rx="8" fill="#a85a2a"/><text x="210" y="192" fill="#fff" font-weight="700">TAMAM</text>
+<text x="450" y="30" font-weight="700">DÜZ: tek duvar</text>
+<rect x="340" y="42" width="220" height="12" fill="#bfae9b"/><rect x="340" y="54" width="220" height="20" fill="#d9c4a3" stroke="#7a6a55"/>
+<text x="450" y="110" font-weight="700">KÖŞE: iki duvar (L)</text>
+<path d="M360 128h200v12h-188v70h-12z" fill="#bfae9b"/><path d="M372 140h188v20h-168v50h-20z" fill="#d9c4a3" stroke="#7a6a55"/>
+<text x="540" y="200" font-size="12" fill="#7a6a5a">DÖNÜŞ: SAĞA / SOLA</text>
+</g></svg>
+<figcaption>DÜZ = tek duvar, KÖŞE = iki duvarlı L oda. Köşe seçince DÖNÜŞ (SAĞA veya SOLA) ve 2. DUVAR EN kutusu açılır.</figcaption>
+</figure>
+<ol>
+<li>Odanız tek duvardan oluşuyorsa <b class="k">DÜZ</b>, iki duvarlıysa <b class="k">KÖŞE</b> seçin.</li>
+<li><b>EN</b> (duvarın uzunluğu) ve <b>BOY</b> (tavan yüksekliği) kutularına dokunup tuş takımıyla yazın. <b class="k">İleri ›</b> sizi sonraki kutuya götürür.</li>
+<li>KÖŞE'de ikinci duvarın <b>DÖNÜŞ</b> yönünü (SAĞA veya SOLA) ve <b>2. DUVAR EN</b> değerini girin.</li>
+<li><b class="k">TAMAM</b> ile oda çizilir. Değerler sıfırdan büyük olmalıdır, aksi halde uyarı çıkar.</li>
+</ol>
+
+<figure class="fig"><img src="/img/mutfak.jpg" alt="Yapım ekranında örnek mutfak" style="width:100%;height:auto;border-radius:8px"><figcaption>Yapım ekranında yerleştirilmiş dolaplar (örnek mutfak).</figcaption></figure>
+<h3>7.2 Araç çubuğu</h3>
+<p>Oda açılınca ekranın kenarında araç çubuğu görünür. Köşesinde işaret olan düğmenin alt menüsü vardır; <b>uzun basınca</b> düğmenin ne işe yaradığı yazar. İlk girişte bunu anlatan bir ipucu çıkar, <b class="k">Anladım</b> ile kapanır.</p>
+<figure class="fig">
+<svg viewBox="0 0 640 120" role="img" aria-label="Yapım araç çubuğu">
+<g font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">
+<rect x="10" y="20" width="620" height="70" rx="14" fill="#fff" stroke="#bfae9b" stroke-width="2"/>
+<g fill="#f3e7d8" stroke="#a85a2a"><rect x="22" y="30" width="76" height="50" rx="10"/><rect x="108" y="30" width="76" height="50" rx="10"/><rect x="194" y="30" width="76" height="50" rx="10"/><rect x="280" y="30" width="76" height="50" rx="10"/><rect x="366" y="30" width="76" height="50" rx="10"/><rect x="452" y="30" width="76" height="50" rx="10"/></g>
+<rect x="540" y="30" width="80" height="50" rx="10" fill="#a85a2a"/>
+<g fill="#2b2118" font-size="22"><text x="60" y="58">‹</text><text x="146" y="58">▭</text><text x="232" y="58">▯</text><text x="318" y="58">▤</text><text x="404" y="58">⤢</text><text x="490" y="58">📏</text></g>
+<text x="580" y="58" fill="#fff" font-size="20">⚙</text>
+<g fill="#2b2118"><text x="60" y="74">Geri</text><text x="146" y="74">Dolap</text><text x="232" y="74">Panel</text><text x="318" y="74">Taç Baza</text><text x="404" y="74">FIT</text><text x="490" y="74">Ölçü</text></g>
+<text x="580" y="74" fill="#fff">Üretim</text>
+</g></svg>
+<figcaption>Soldan sağa: Geri · Dolap · Panel · Taç Baza · FIT · Ölçü · Üretim.</figcaption>
+</figure>
+<figure class="fig"><img src="/img/arac-cubugu.jpg" alt="Uygulamadaki gerçek araç çubuğu" style="width:100%;height:auto;border-radius:8px"><figcaption>Uygulamadaki gerçek araç çubuğu. Köşesinde küçük üçgen olan düğmelerin alt menüsü vardır.</figcaption></figure>
+<table>
+<tr><th>Düğme</th><th>İşlevi</th></tr>
+<tr><td>Geri</td><td>DOLAP ALANI formuna, yani duvar ölçüsüne döner.</td></tr>
+<tr><td>Dolap</td><td>Dolap türü menüsünü açar (<a href="#dolap">8. bölüm</a>).</td></tr>
+<tr><td>Panel</td><td>Ara panel ve açık raf menüsü (<a href="#panel">11. bölüm</a>).</td></tr>
+<tr><td>Taç Baza</td><td>Taç, ışık bandı, baza ve mermer seçenekleri (<a href="#tac">12. bölüm</a>).</td></tr>
+<tr><td>FIT</td><td>Yakınlaştırma şeridini açar: − , FIT , +.</td></tr>
+<tr><td>Ölçü</td><td>Cetvel ölçülerini açar veya kapatır.</td></tr>
+<tr><td>Üretim</td><td>Kesim listesine geçer (<a href="#uretim">14. bölüm</a>).</td></tr>
+</table>
+<p><b>Dolaba tek dokunuş:</b> Yerleşmiş bir dolaba dokununca altta <b class="k">Düzenle</b> ve <b class="k">Kaldır</b> şeridi çıkar. Dolabı kaldırırsanız kısa bir süre <b class="k">Dolap kaldırıldı · Geri al</b> görünür; onay sorusu yoktur, yanlışlıkla silerseniz Geri al deyin.</p>
+<p><b>Odayı gezmek:</b> Parmağınızla odayı çevirebilir, yaklaşıp uzaklaşabilirsiniz. Ekranın en uygun hale gelmesi için FIT kullanın.</p>
+
+<h2 id="dolap">8. Dolap ekleme ve dolap menüsü</h2>
+<h3>8.1 Dolap türünü seçmek</h3>
+<p><b class="k">Dolap</b> düğmesine dokunun. Önce grup, sonra o grubun çeşitleri çıkar. Köşe çeşitleri yalnız iki duvarlı (KÖŞE) odada görünür.</p>
+<figure class="fig">
+<svg viewBox="0 0 640 250" role="img" aria-label="Dolap türü menüsü">
+<g font-family="system-ui,sans-serif" font-size="13">
+<rect x="10" y="10" width="110" height="230" rx="10" fill="#fff" stroke="#bfae9b" stroke-width="2"/>
+<g text-anchor="middle"><rect x="20" y="20" width="90" height="36" rx="8" fill="#a85a2a"/><text x="65" y="43" fill="#fff">Tezgah altı</text>
+<rect x="20" y="62" width="90" height="36" rx="8" fill="#f3e7d8"/><text x="65" y="85">Normal alt</text>
+<rect x="20" y="104" width="90" height="36" rx="8" fill="#f3e7d8"/><text x="65" y="127">Üst</text>
+<rect x="20" y="146" width="90" height="36" rx="8" fill="#f3e7d8"/><text x="65" y="169">Boy</text>
+<rect x="20" y="188" width="90" height="36" rx="8" fill="#f3e7d8"/><text x="65" y="211">Yan</text></g>
+<path d="M126 125h30" stroke="#a85a2a" stroke-width="3"/><path d="M156 125l-9-7v14z" fill="#a85a2a"/>
+<g fill="#2b2118">
+<text x="172" y="30" font-weight="700">Tezgah altı</text><text x="172" y="50">Normal · Evye / Lavabo · Fırın · Kör köşe · L köşe</text>
+<text x="172" y="82" font-weight="700">Normal alt</text><text x="172" y="102">Normal · Bulaşık mak. yeri · Kör köşe · L köşe</text>
+<text x="172" y="134" font-weight="700">Üst</text><text x="172" y="154">Normal · Kombi dolabı · Kör köşe · L köşe</text>
+<text x="172" y="186" font-weight="700">Boy</text><text x="172" y="206">Normal · Fırın dolabı · Buzdolabı</text>
+<text x="172" y="238" font-weight="700">Yan</text><text x="214" y="238">Yan alt · Yan tezgah altı · Yan üst</text>
+</g></g></svg>
+<figcaption>Önce gruba, sonra çeşide dokunursunuz. Menüyü kapatmak için ✕ kullanın.</figcaption>
+</figure>
+<h3>8.2 Ölçüyü girmek ve yerleştirmek</h3>
+<figure class="fig">
+<svg viewBox="0 0 640 140" role="img" aria-label="Dolap ekleme adımları">
+<g font-family="system-ui,sans-serif" font-size="13" text-anchor="middle">
+<rect x="10" y="20" width="140" height="90" rx="10" fill="#f3e7d8" stroke="#a85a2a"/><text x="80" y="50" font-weight="700">1. Tür seç</text><text x="80" y="72" font-size="12" fill="#7a6a5a">Dolap › grup › çeşit</text>
+<path d="M156 65h30" stroke="#a85a2a" stroke-width="3"/><path d="M186 65l-9-7v14z" fill="#a85a2a"/>
+<rect x="190" y="20" width="140" height="90" rx="10" fill="#f3e7d8" stroke="#a85a2a"/><text x="260" y="50" font-weight="700">2. Ölçü gir</text><text x="260" y="72" font-size="12" fill="#7a6a5a">Genişlik, yükseklik…</text>
+<path d="M336 65h30" stroke="#a85a2a" stroke-width="3"/><path d="M366 65l-9-7v14z" fill="#a85a2a"/>
+<rect x="370" y="20" width="120" height="90" rx="10" fill="#a85a2a"/><text x="430" y="50" font-weight="700" fill="#fff">3. YERLEŞTİR</text><text x="430" y="72" font-size="12" fill="#f7e6d6">duvara oturur</text>
+<path d="M496 65h30" stroke="#a85a2a" stroke-width="3"/><path d="M526 65l-9-7v14z" fill="#a85a2a"/>
+<rect x="530" y="20" width="100" height="90" rx="10" fill="#f3e7d8" stroke="#a85a2a"/><text x="580" y="50" font-weight="700">4. BİTİR</text><text x="580" y="72" font-size="12" fill="#7a6a5a">istersen düzenle</text>
+</g></svg>
+<figcaption>Bir dolabın yolculuğu: tür, ölçü, yerleştirme, bitirme.</figcaption>
+</figure>
+<ol>
+<li>Dolap türünü seçin. Altta dolap menüsü (panel) açılır; başlığında dolabın adı yazar. Köşeli odada hangi duvara konacağı da (ör. "2. Duvar") görünür.</li>
+<li><b>Ölçü</b> sekmesinde kutulara dokunup ölçüleri girin: <b>Genişlik</b>, <b>Yükseklik</b>, <b>Derinlik</b> (üst dolapta ayrıca <b>Yerden yükseklik</b>). Alt kutudaki büyük tuş <b class="k">İleri ›</b> ile sonrakine geçer; son kutuda tuş <b class="k">YERLEŞTİR</b> olur.</li>
+<li>Daha önce aynı türden bir dolap yerleştirdiyseniz <b class="k">Son ölçüyü kullan</b> düğmesi çıkar; ölçüleri yeniden yazmadan alır.</li>
+<li><b class="k">YERLEŞTİR</b> dolabı duvara oturtur. Menü açık kalır ve <b>✓ Dolap yerleşti</b> uyarısı görünür; bu aşamada kapak, iç, bölme gibi ayrıntıları değiştirebilirsiniz.</li>
+<li><b class="k">BİTİR</b> ile dolabı tamamlarsınız. Daha önce yerleşmiş bir dolabı düzenliyorsanız alttaki düğme <b class="k">TAMAM</b> olur.</li>
+<li><b class="k">İptal</b> dolabı eklemeyi vazgeçer. <b class="k">Aynısını ekle</b> aynı ölçü ve içerikte yeni bir dolap hazırlar.</li>
+</ol>
+<div class="note">Panel kapanırsa (dışarı dokunursanız) taslak duvarda durur; altta <b class="k">Yerleştir</b> · <b class="k">Düzenle</b> · <b class="k">İptal</b> şeridi çıkar. Dolap eklerken menüyü parmağınızla sürükleyip yerini değiştirebilirsiniz.</div>
+
+<h3>8.3 Dolap menüsünün sekmeleri</h3>
+<p>Menünün üstündeki sekmeler dolap türüne göre değişir:</p>
+<table>
+<tr><th>Dolap</th><th>Sekmeler</th></tr>
+<tr><td>Normal alt, Üst, Tezgah altı</td><td>Ölçü · İç · Kapak</td></tr>
+<tr><td>Kör köşe, L köşe</td><td>Ölçü · Köşe · İç</td></tr>
+<tr><td>Boy, Fırın dolabı, Buzdolabı, Yan dolaplar</td><td>Ölçü · Bölmeler</td></tr>
+<tr><td>Kombi dolabı</td><td>Ölçü · Kapak</td></tr>
+</table>
+<h4>Ölçü sekmesi</h4>
+<ul>
+<li>Üst dolapta, alt dolapla aranızdaki mesafe ("Alt dolapla arası … mm") gösterilir. 450 mm'den azsa uyarı çıkar: çalışırken başa çarpabilir, davlumbaz sığmayabilir.</li>
+<li>Kolon önündeki dolapta "Kolon önü" notu çıkar; çok sığ dolap (alt ve boy için 300 mm, üst için 150 mm altı) için uyarı verilir.</li>
+<li>Kolondan geniş bir dolap kolona denk gelirse program <b>kolon çentiği</b> açar (çentik ölçüleri kolondan gelir, yalnız okunur). Çentik istemezseniz <b class="k">Kolonun yanına al</b> ile dolabı kolonun yanına kaydırırsınız.</li>
+</ul>
+<h4>Kapak sekmesi</h4>
+<figure class="fig">
+<svg viewBox="0 0 640 150" role="img" aria-label="Kapak açılış yönleri">
+<g font-family="system-ui,sans-serif" font-size="13" text-anchor="middle">
+<g stroke="#7a6a55" stroke-width="2" fill="#ede9e1">
+<rect x="30" y="10" width="100" height="90"/>
+<rect x="190" y="10" width="100" height="90"/>
+<rect x="350" y="10" width="46" height="90"/><rect x="400" y="10" width="46" height="90"/>
+<rect x="510" y="10" width="100" height="90"/></g>
+<path d="M30 10l100 45L30 100" fill="none" stroke="#a85a2a" stroke-dasharray="4 3"/>
+<path d="M290 10l-100 45 100 45" fill="none" stroke="#a85a2a" stroke-dasharray="4 3"/>
+<path d="M350 10l46 45-46 45M446 10l-46 45 46 45" fill="none" stroke="#a85a2a" stroke-dasharray="4 3"/>
+<path d="M510 100l50-45 50 45" fill="none" stroke="#a85a2a" stroke-dasharray="4 3"/>
+<text x="80" y="124">Sağa (menteşe sağda)</text><text x="240" y="124">Sola (menteşe solda)</text><text x="398" y="124">İki kapak: ortadan</text><text x="560" y="124">Yukarı (klapa)</text>
+<text x="320" y="146" font-size="11" fill="#7a6a5a">Kesikli çizgi menteşe tarafını gösterir.</text>
+</g></svg>
+<figcaption>Kapak açılış seçenekleri (şematik). Kesikli "V" menteşenin olduğu kenarı gösterir.</figcaption>
+</figure>
+<ul>
+<li><b>Ön:</b> <b class="k">Kapak</b> · <b class="k">Çekmece</b> · <b class="k">Açık</b> (kapaksız). Üst dolapta çekmece seçeneği yoktur.</li>
+<li><b>Kapak adedi</b> veya <b>Çekmece adedi</b> artı/eksi ile ayarlanır. Geniş dolaplarda kapak adedi genişliğe göre kendiliğinden 1 veya 2 gelir.</li>
+<li><b>Açılış</b> (kapakta): <b class="k">Sola</b> · <b class="k">Sağa</b> · <b class="k">Yukarı (klapa)</b>. İki kapakta varsayılan <i>ortadan açılış</i>tır (hiçbir tuş basılı değil); Sola veya Sağa seçilebilir, seçili tuşa tekrar dokunmak varsayılana döndürür. Klapada tek kapak olur, kulp altta yatay durur ve piston sayısı maliyete girer.</li>
+<li><b>Dağılım</b> (çekmecede): <b class="k">Eşit</b> veya <b class="k">Üstteki dar</b>.</li>
+</ul>
+<h4>İç sekmesi</h4>
+<ul>
+<li><b>Raf:</b> <b class="k">Rafsız</b> / <b class="k">Raflı</b>. Raflıyı seçince <b>Raf adedi</b> ve <b>Raf türü</b> (<b class="k">Hareketli</b> / <b class="k">Sabit</b>) çıkar. Raflar eşit aralıkla dizilir. Çekmeceli dolapta raf olmaz.</li>
+<li><b>Gövde ayrıntıları:</b> <b>Alt kapama</b> ve <b>Arka kapama</b> için <b class="k">Ekle</b> / <b class="k">Çıkart</b>. Arka kapamayı çıkartırsanız arkalık kesim listesine girmez (evye, tesisat gibi yerler için). Alt kapama, evye dolabında yoktur.</li>
+<li><b>Gövde:</b> <b class="k">Tek bölme</b> veya <b class="k">Böl</b>. Böl'de geniş dolap, ortak dikmelerle yan yana bölmelere ayrılır; <b>Bölme sayısı</b> seçilir, bölmeler eşit genişliktedir ve her bölmenin içeriği (Kapak / Çekmece / Açık) ayrı seçilir. Bölmeler arasındaki kapak aralığı Proje Ayarları'ndan gelir.</li>
+<li><b>Yan kapama:</b> Yerleşmiş bir dolabın yanında boşluk varsa <b class="k">Yan kapama koy · sol</b> (veya sağ) çıkar. Konan yan kapama <b class="k">Yan kapamayı kaldır</b> ile alınır; dolgu konduysa <b class="k">Dolguyu kaldır</b> çıkar.</li>
+</ul>
+<h4>Bölmeler sekmesi (Boy, Fırın dolabı, Buzdolabı)</h4>
+<ul>
+<li>Boy dolap önce kapaksız boş kutu olarak gelir. <b class="k">+ Bölme</b> ilk basışta dolabı 3 eşit bölmeye ayırır, sonraki basışlarda bir bölme daha ekler.</li>
+<li>Her bölme bir satırdır (hepsi kapalı başlar, dokunan açılır). Bölmede <b class="k">Kapak</b> · <b class="k">Çekmece</b> · <b class="k">Açık</b> · <b class="k">Cihaz</b> seçilir. Cihaz: Buzdolabı · Fırın · Mikrodalga.</li>
+<li>Her bölmenin <b>yüksekliği</b> girilir; en üstteki "kalan"dır, kendiliğinden hesaplanır.</li>
+<li>Kapaklı veya açık bölmede <b class="k">Rafsız</b> / <b class="k">Raflı</b>, <b>Raf adedi</b>, <b class="k">Hareketli</b> / <b class="k">Sabit</b> seçilir. <b class="k">Askı panosu</b> (vestiyer) cihazsız bölmede eklenebilir.</li>
+<li><b>Gövde ayrıntıları:</b> Alt kapama, Arka kapama ve <b>Menteşe dikmesi</b> (Ekle/Çıkart). Dikme eklenince dikme tarafı için <b class="k">Dikme solda</b> / <b class="k">Dikme sağda</b> seçilir. Dikme kesim listesine çıkar.</li>
+</ul>
+
+<h2 id="turler">9. Dolap türleri</h2>
+<figure class="fig">
+<svg viewBox="0 0 640 170" role="img" aria-label="Dolap türleri çizimi">
+<g font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">
+<rect x="10" y="10" width="620" height="2" fill="none"/>
+<g stroke="#7a6a55" stroke-width="1.5">
+<rect x="20" y="86" width="80" height="50" fill="#ede9e1"/><rect x="26" y="136" width="68" height="10" fill="#b89a6e"/><rect x="20" y="78" width="80" height="8" fill="#d9c4a3"/>
+<rect x="140" y="26" width="80" height="50" fill="#ede9e1"/>
+<rect x="260" y="20" width="50" height="116" fill="#ede9e1"/><rect x="260" y="64" width="50" height="1" fill="#7a6a55"/><rect x="266" y="136" width="38" height="10" fill="#b89a6e"/>
+<rect x="360" y="86" width="90" height="50" fill="#ede9e1"/><rect x="368" y="96" width="30" height="30" fill="#2b2118" opacity=".8"/><rect x="366" y="136" width="78" height="10" fill="#b89a6e"/>
+<rect x="500" y="86" width="100" height="50" fill="#ede9e1"/><rect x="506" y="136" width="88" height="10" fill="#b89a6e"/><path d="M500 111h100M500 99h100M500 123h100" stroke="#a39c92"/>
+</g>
+<g fill="#2b2118"><text x="60" y="162">Normal alt</text><text x="180" y="96">Üst</text><text x="285" y="162">Boy</text><text x="405" y="162">Fırın / evye…</text><text x="550" y="162">Çekmeceli</text></g>
+</g></svg>
+<figcaption>Önden görünüşle başlıca türler (şematik).</figcaption>
+</figure>
+<table>
+<tr><th>Tür</th><th>Ne için? Dikkat edilecekler</th></tr>
+<tr><td><b>Normal alt</b></td><td>Tam üst tablalı alt dolap. <b>Bulaşık mak. yeri</b>: makine için yer ayırır.</td></tr>
+<tr><td><b>Tezgah altı</b></td><td>Üstü tezgahla kapanacak alt dolap: tam üst tabla yoktur, onun yerine ön ve arka kuşak vardır (<b>Normal</b>: ön yatık + arka dik; genişlik Proje Ayarları › Kuşak genişliği). <b>Evye / Lavabo</b>: iki kuşak da diktir, arkası açıktır. <b>Fırın</b>: altta çekmece, üstte fırın yeri olan tezgah altı dolap; çekmece yüksekliğini siz girersiniz, fırın yeri kalanı alır. Bölmeleri <b>Bölmeler</b> sekmesinden değiştirilir.</td></tr>
+<tr><td><b>Üst</b></td><td>Duvara asılı dolap. <b>Yerden yükseklik</b> girilir. Kapak adedi 1 veya 2; yukarı açılan (klapa) seçilebilir. <b>Kombi dolabı</b>: tek kapak, rafsız, altı ve arkası açık; kapakta 3 havalandırma yarığı (usta açar). Öneri genişlik 600, derinlik en az 350 mm. Kombi kılavuzuna ve gaz şirketi kurallarına uyun.</td></tr>
+<tr><td><b>Boy</b></td><td>Yerden yukarı kadar uzanan dolap. Bölmelerle ayrılır (<a href="#dolap">8.3</a>). <b>Fırın dolabı (boy)</b>: <i>Fırın yeri</i> yüksekliği girilir. <b>Buzdolabı</b>: <i>Buzdolabı yeri</i> yüksekliği girilir; üstteki bölme kalan yükseklikle kendiliğinden belirlenir (kapaklı veya açık olabilir). <b>Arkalık: Var/Yok</b> düğmesi vardır. Fırın ve buzdolabı dolabında menteşe dikmesi yoktur.</td></tr>
+<tr><td><b>Kör köşe</b></td><td>Köşede, diğer duvardaki dolabın arkasına uzanan kör bölgeli tek kapaklı dolap. <b>Köşe</b> sekmesinde <i>Kör taraf</i> (köşeye göre otomatik) ve <i>Kör bölge</i> (yerleşince hesaplanır) okunur. Kapak, karşı dolap kapağından 2 mm sonra başlar; kulp dış uçta, menteşe köşe tarafında menteşe dikmesindedir. Kör bölge dar kalırsa uyarı çıkar.</td></tr>
+<tr><td><b>L köşe</b></td><td>İki kollu köşe dolabı. <b>Ölçü</b> sekmesinde <b>Sol kol</b> ve <b>Sağ kol</b> girilir. <b>Köşe</b> sekmesinde: kapak (katlanır iki kanat, ölçüleri gösterilir), <b>Menteşe tarafı</b> (Sol kol / Sağ kol), <b>Köşe dolgusu</b> (Çıkart / Ekle ve hazır ölçüler ya da <b>Dolgu</b> kutusu). Kulp kendiliğinden kulplu kanadın dış ucundadır. Köşe 90° olmalıdır.</td></tr>
+<tr><td><b>Yan</b></td><td><b>Yan alt</b>, <b>Yan tezgah altı</b>, <b>Yan üst</b>: geniş, bölmeli dolaplardır. Boş kutu olarak gelir; <b>+ Bölme</b> ile bölmeler eklenir. Her bölmenin <i>genişliği</i> yazılabilir (boş bırakılanlar kalanı eşit paylaşır). Her bölme kat kat (Alt kat, Üst kat…) ayrılabilir; her katta <b>Kapak</b> / <b>Çekmece</b> / <b>Açık</b>, kapak ve çekmece adedi, raf adedi ve türü, kat yüksekliği seçilir. Bölmeler arasında <b>Dikme ayarı</b> ile menteşe dikmesi (Solda / Sağda) kullanılabilir. Kapaklarda açılış yönü seçilir (yan üstte ayrıca Yukarı). Ortak odada çekmece olmaz; komşu bölmede çekmece varsa program uyarır.</td></tr>
+</table>
+
+<h2 id="bosluk">10. Boşluk, dolgu ve yan kapama</h2>
+<p>Duvarda dolaplar arasında veya yanında boş yer kalırsa, o boşluğa dokunduğunuzda <b>Kalan genişlik</b> menüsü açılır:</p>
+<figure class="fig">
+<svg viewBox="0 0 640 130" role="img" aria-label="Duvarda boşluk">
+<g font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">
+<rect x="40" y="20" width="560" height="14" fill="#bfae9b"/>
+<g stroke="#7a6a55" stroke-width="1.5" fill="#ede9e1"><rect x="40" y="40" width="150" height="60"/><rect x="190" y="40" width="130" height="60"/><rect x="440" y="40" width="160" height="60"/></g>
+<rect x="320" y="40" width="120" height="60" fill="none" stroke="#a85a2a" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="380" y="75" fill="#a85a2a" font-weight="700">Kalan genişlik</text>
+<path d="M322 110h116" stroke="#a85a2a"/><path d="M322 104v12M438 104v12" stroke="#a85a2a"/><text x="380" y="126" fill="#a85a2a">440 mm</text>
+</g></svg>
+<figcaption>Kesikli çizgili alan boşluktur; dokununca menü açılır.</figcaption>
+</figure>
+<ul>
+<li><b class="k">Kalan genişliği kullan</b>: boşluğa tek dolap koymaya başlar; genişlik boşluğa göre dolar.</li>
+<li><b class="k">… dolaba böl</b>: boşluk 300 mm veya daha genişse eşit parçalara bölerek birkaç dolap hazırlar. Önce ilk dolabı yerleştirin, kalan için boşluğa tekrar dokunun.</li>
+<li><b class="k">Dolgu koy · … kesilir</b>: boşluğu dolgu parçasıyla kapatır. Dolgu, boşluğun yanındaki dolaba takılır; yanında dolap yoksa dolgu konamaz. 100 mm'den dar boşluk için dolgu önerilir. Dolgu parçasının ölçüsünü sahada kontrol edin.</li>
+</ul>
+
+<h2 id="panel">11. Panel ve raf</h2>
+<p><b class="k">Panel</b> düğmesi iki iş yapar: <b>ara panel</b> (alt ve üst dolap arasındaki boşluğu kapatan panel) ve <b>açık raf</b> (bağımsız raf).</p>
+<figure class="fig">
+<svg viewBox="0 0 640 200" role="img" aria-label="Ara panel ve açık raf">
+<g font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">
+<rect x="40" y="10" width="560" height="14" fill="#bfae9b"/>
+<g stroke="#7a6a55" stroke-width="1.5" fill="#ede9e1"><rect x="40" y="30" width="200" height="50"/><rect x="40" y="130" width="200" height="50"/></g>
+<rect x="40" y="80" width="200" height="50" fill="#e4d3bb" stroke="#a85a2a" stroke-dasharray="5 4"/><text x="140" y="110" fill="#a85a2a" font-weight="700">Ara panel</text>
+<g stroke="#7a6a55" stroke-width="1.5" fill="#ede9e1"><rect x="380" y="30" width="200" height="50"/><rect x="380" y="130" width="200" height="50"/></g>
+<rect x="400" y="98" width="160" height="8" fill="#b89a6e" stroke="#7a6a55"/><text x="480" y="124" fill="#a85a2a" font-weight="700">Açık raf</text>
+<text x="140" y="196" fill="#7a6a5a">Alt ve üst dolap arası</text><text x="480" y="196" fill="#7a6a5a">Boşlukta bağımsız raf</text>
+</g></svg>
+<figcaption>Ara panel boşluğu tamamen kapatır; açık raf yalnız rafı koyar.</figcaption>
+</figure>
+<h4>Raf sekmesi</h4>
+<ol>
+<li><b>Soldan</b>, <b>Yerden</b>, <b>En</b>, <b>Derinlik</b> kutularını doldurun. Köşeli odada hangi duvara konacağını da seçebilirsiniz.</li>
+<li>Alt dolap ile üst dolap arasına raf koymak için <b class="k">Alt-üst arasına indir</b>: raf alt dolap üstü ile üst dolap altının ortasına iner. Yerden değeri boşken kendiliğinden gelir. Orada alt ve üst dolap birlikte yoksa uyarı çıkar.</li>
+<li><b class="k">YERLEŞTİR</b> ile raf konur; "✓ Raf yerleşti" yazar. Seçilen yer doluysa raf en yakın boş yere kayar ve bu bildirilir.</li>
+<li><b class="k">Aynısını ekle</b>, <b class="k">Kaldır</b>, <b class="k">BİTİR</b> düğmeleri kullanılır.</li>
+</ol>
+<h4>Panel sekmesi</h4>
+<ul>
+<li>Uygun boşluklar (alt ve üst dolap arası) listelenir. Boşluğun yanındaki <b class="k">Ekle</b> ile düz ara panel konur; panel konduktan sonra <b class="k">Düz</b> / <b class="k">Çıtalı</b> seçilir (çıtalı şimdilik yalnız görünüm, kesimde düz paneldir).</li>
+<li><b class="k">Hepsine ekle</b> ya da menüdeki <b class="k">Tüm boşluklara ara panel koy</b> bütün boşlukları bir seferde doldurur.</li>
+<li>Ara panel konacak boşluk yoksa "Önce alt ve üst dolapları koyun" uyarısı çıkar.</li>
+</ul>
+<h4>Konmuş panele veya rafa dokunmak</h4>
+<ul>
+<li><b>Ara panele</b> dokunun: <b class="k">Düz yap</b> / <b class="k">Çıtalı yap</b>, <b class="k">Raf ekle</b>, <b class="k">Panelsiz yap</b> (panel kalkar, raflar kalır) ve <b class="k">Kaldır</b>.</li>
+<li><b>Rafa</b> dokunun: <b class="k">Ölçü</b> (Raf derinliği, Yerden değiştirilir), <b class="k">+ Bir raf daha</b>, <b class="k">Panel ekle</b> (rafın arkasına panel), <b class="k">Kaldır</b>. Rafı parmakla sürükleyerek de taşıyabilirsiniz.</li>
+<li>Rafın ön kenarı bantlıdır; gizli raf demiri hırdavat listesine kendiliğinden yazılır.</li>
+<li>Menüde <b class="k">Panel / raf alanını göster / gizle</b> düğmesi boşlukları sahnede işaretler.</li>
+</ul>
+
+<h2 id="tac">12. Taç, Işık, Baza</h2>
+<p><b class="k">Taç Baza</b> düğmesine dokununca küçük bir menü açılır. Taç ve ışık bandı yalnız Proje Ayarları › Üst'te "Olmasın" dışında bir şey seçiliyse listelenir.</p>
+<figure class="fig">
+<svg viewBox="0 0 640 190" role="img" aria-label="Taç, ışık bandı ve baza">
+<g font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">
+<rect x="200" y="8" width="170" height="14" fill="#c9b28f" stroke="#7a6a55"/><text x="440" y="20" text-anchor="start" fill="#a85a2a">Taç (üst dolapların üstü)</text>
+<rect x="200" y="22" width="170" height="46" fill="#ede9e1" stroke="#7a6a55" stroke-width="1.5"/>
+<rect x="200" y="68" width="170" height="6" fill="#f6e08a" stroke="#c4a73a"/><text x="440" y="74" text-anchor="start" fill="#a85a2a">Işık bandı (üst dolapların altı)</text>
+<rect x="200" y="118" width="170" height="44" fill="#ede9e1" stroke="#7a6a55" stroke-width="1.5"/>
+<rect x="206" y="162" width="158" height="14" fill="#b89a6e" stroke="#7a6a55"/><text x="440" y="174" text-anchor="start" fill="#a85a2a">Baza (alt dolapların altı)</text>
+</g></svg>
+<figcaption>Taç, ışık bandı ve baza dolap dizisine eklenen ek parçalardır.</figcaption>
+</figure>
+<table>
+<tr><th>Menü satırı</th><th>Ne yapar?</th></tr>
+<tr><td>Taç ekle / Taçı kaldır</td><td>Üst dolap dizisinin üstüne taç koyar veya kaldırır.</td></tr>
+<tr><td>Işık ekle / Işığı kaldır</td><td>Üst dolapların altına ışık bandı koyar veya kaldırır.</td></tr>
+<tr><td>Baza birleştir / Baza ayır</td><td>Alt dolapların bazalarını tek parça yapar veya dolap dolap ayırır.</td></tr>
+<tr><td>Mermer ekle (sadece görsel) / Mermeri kaldır</td><td>Tezgah üstü mermeri yalnız görünüm içindir; kesim listesine girmez.</td></tr>
+<tr><td>Baza kapama sol / sağ</td><td><b class="k">Var</b> / <b class="k">Yok</b>: bazanın uç tarafı kapansın mı. Yeni dolap konunca varsayılan <b>Var</b>'dır; "Yok" seçiminiz bu proje için hatırlanır. Örnek mutfakta kapamalar kapalı gelir.</td></tr>
+<tr><td>Taç kapama sol / sağ</td><td><b class="k">Var</b> / <b class="k">Yok</b>: tacın uç tarafı kapansın mı.</td></tr>
+</table>
+<div class="note">Taç ve ışık bandının türü ve yüksekliği Proje Ayarları › Üst'ten seçilir.</div>
+
+<h2 id="olcu">13. FIT, Ölçü, Kolon ve Niş</h2>
+<h3>FIT</h3>
+<p><b class="k">FIT</b> düğmesi görünüm şeridini açar: <b class="k">−</b> uzaklaştırır, <b class="k">+</b> yaklaştırır, ortadaki <b class="k">FIT</b> odayı ekrana sığdırır.</p>
+<h3>Ölçü</h3>
+<p><b class="k">Ölçü</b> cetveli açar: odadaki ölçü yazıları görünür ve <b class="k">Geri al</b> / <b class="k">İleri al</b> belirir. Kapatınca yalnız cetvel çizgisi kalır. Her değişiklik geçmişe yazılır, Geri al ile adım adım dönebilirsiniz.</p>
+<div class="note">Ücretsiz planın deneme döneminde ölçü yazıları gizlidir. Projenizde ücretsiz proje hakkınızı kullanırsanız her şey açılır.</div>
+<p style="background:#f3e7d8;border-left:4px solid #a85a2a;padding:10px 12px;border-radius:8px"><b>Büyük kolaylık:</b> Kolon veya nişi bir kez girdiğinizde dolap ölçüleri kolona göre kendiliğinden yerleşir. Kolonun önüne konan dolap kolona dayanır, kolondan geniş dolapta çentik otomatik açılır ve kesim listesine yazılır.</p><h3>Kolon / Çıkıntı ve Niş / Girinti</h3>
+<p>Duvarda çıkıntı (kolon, baca) veya girinti (niş) varsa onu bir ölçü yazısına dokunarak eklersiniz.</p>
+<figure class="fig">
+<svg viewBox="0 0 640 170" role="img" aria-label="Kolon ve niş üstten görünüş">
+<g font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">
+<path d="M30 40h240v70h-240z" fill="none"/>
+<path d="M30 30h110v22h60v-22h70v10H30z" fill="#bfae9b"/><rect x="140" y="30" width="60" height="22" fill="#9c8d78"/>
+<text x="170" y="75" fill="#a85a2a" font-weight="700">Kolon / Çıkıntı</text><text x="170" y="92" fill="#7a6a5a">duvardan öne çıkar</text>
+<path d="M370 30h90v-0h60v0h90v10H370z" fill="#bfae9b"/><rect x="460" y="40" width="60" height="22" fill="#faf6f1" stroke="#bfae9b"/>
+<text x="490" y="85" fill="#a85a2a" font-weight="700">Niş / Girinti</text><text x="490" y="102" fill="#7a6a5a">duvarın içine girer</text>
+</g></svg>
+<figcaption>Kolon duvardan öne çıkar, niş duvarın içine girer (üstten bakış, şematik).</figcaption>
+</figure>
+<ol>
+<li>Önce duvarı seçin; altta o duvarın şeridi çıkar ("Duvar 1"). Bu şeritte <b class="k">Kolon / Çıkıntı</b>, <b class="k">Niş / Girinti</b> ve <b class="k">Ölçüyü Düzenle</b> düğmeleri vardır.</li>
+<li>Kolon veya nişi seçince üç kutu açılır: <b>Başlangıç</b> (duvarın solundan uzaklık), <b>Genişlik</b>, <b>Derinlik</b>. Değerleri yazıp <b class="k">Tamam</b>'a basın.</li>
+<li>Başlangıç 0 veya daha büyük, genişlik ve derinlik sıfırdan büyük olmalıdır.</li>
+<li><b>Ölçüyü Düzenle</b> duvarın en ve boy ölçüsünü değiştirir.</li>
+<li>Kolon eklediğiniz yerin önüne konan dolap kolonun yüzüne dayanır; kolondan geniş dolapta çentik açılır (<a href="#dolap">8.3</a>).</li>
+</ol>
+
+<h2 id="uretim">14. Üretim</h2>
+<p>Yapım'da <b class="k">Üretim</b> düğmesi veya Proje Ayarları'ndaki üst adım satırı sizi buraya getirir. Dört sekme vardır:</p>
+<figure class="fig">
+<svg viewBox="0 0 640 260" role="img" aria-label="Üretim ekranı şeması">
+<g font-family="system-ui,sans-serif" font-size="13">
+<rect x="120" y="6" width="400" height="248" rx="14" fill="#fff" stroke="#bfae9b" stroke-width="2"/>
+<g text-anchor="middle"><rect x="134" y="16" width="84" height="28" rx="8" fill="#a85a2a"/><text x="176" y="35" fill="#fff">Kesim</text>
+<rect x="224" y="16" width="84" height="28" rx="8" fill="#f3e7d8"/><text x="266" y="35">Hırdavat</text>
+<rect x="314" y="16" width="84" height="28" rx="8" fill="#f3e7d8"/><text x="356" y="35">Fiyat</text>
+<rect x="404" y="16" width="84" height="28" rx="8" fill="#f3e7d8"/><text x="446" y="35">Plan</text></g>
+<g font-size="11" text-anchor="middle" fill="#2b2118"><rect x="134" y="52" width="60" height="20" rx="5" fill="#f3e7d8" stroke="#a85a2a"/><text x="164" y="66">Excel</text><rect x="200" y="52" width="60" height="20" rx="5" fill="#f3e7d8" stroke="#a85a2a"/><text x="230" y="66">CSV</text><rect x="266" y="52" width="60" height="20" rx="5" fill="#f3e7d8" stroke="#a85a2a"/><text x="296" y="66">PDF</text><rect x="332" y="52" width="60" height="20" rx="5" fill="#f3e7d8" stroke="#a85a2a"/><text x="362" y="66">Yazdır</text><rect x="398" y="52" width="110" height="20" rx="5" fill="#a85a2a"/><text x="453" y="66" fill="#fff">Ebatlamaya gönder</text></g>
+<text x="134" y="98" font-weight="700">142 parça · 8,4 m² · bant 47 m</text><rect x="400" y="84" width="100" height="20" rx="5" fill="#faf6f1" stroke="#d8c8b8"/><text x="408" y="98" font-size="11" fill="#7a6a5a">Dolap: Tümü ▾</text>
+<text x="134" y="124" font-weight="700" fill="#6b4a30">D1 · Alt dolap</text>
+<g font-size="12"><text x="134" y="146">D1-1</text><text x="180" y="146">Yan (sol)</text><text x="300" y="146">720 × 560 · 18</text><text x="420" y="146" fill="#7a6a5a">bant: ön</text>
+<text x="134" y="168">D1-2</text><text x="180" y="168">Alt tabla</text><text x="300" y="168">562 × 540 · 18</text><text x="420" y="168" fill="#7a6a5a">bant: ön</text>
+<text x="134" y="190">D1-3</text><text x="180" y="190">Kapak</text><text x="300" y="190">716 × 596 · 18</text><text x="420" y="190" fill="#7a6a5a">bant: 4 kenar</text></g>
+<path d="M134 198h366" stroke="#e3d5c5"/><text x="134" y="224" font-size="11" fill="#7a6a5a">Ölçüler bitmiş ölçüdür (bant dahil).</text>
+</g></svg>
+<figcaption>Kesim sekmesi: özet satırı, dolap süzgeci, dolap dolap gruplanmış parça listesi ve üstte paylaşma düğmeleri. (Rakamlar örnektir.)</figcaption>
+</figure>
+
+<h3>14.1 Kesim</h3>
+<ul>
+<li>Üstte özet: toplam <b>parça</b> sayısı, <b>m²</b> ve kenar bandı <b>metre</b>.</li>
+<li><b>Dolap süzgeci</b> (Tümü ▾) listeyi tek dolaba indirir.</li>
+<li>Parçalar dolap dolap (D1, D2…) gruplanır. Her satırda parça kodu, parça adı, <b>uzunluk × genişlik</b>, kalınlık, <b>bant</b> kenarları, malzeme ve damar yönü bulunur; gerekiyorsa küçük bir not (kolon çentiği, kombi yarığı, taç gönyesi) altta yazar.</li>
+<li>Ölçüler <b>bitmiş ölçüdür</b> (bant dahil). Programın verdiği ölçüleri ilk 1–2 işte kendi hesabınızla da kontrol etmeniz önerilir.</li>
+<li>"<b>Bu listede dikkat edin</b>" kutusu varsa kesmeden önce okuyun; örneğin sarkma riski olan uzun raf gibi uyarılar burada yazar.</li>
+<li><b>Kırmızı satırlar</b> eksik bir kurala bağlı, hazır olmayan parçadır; üstte "Bazı parçalar hazır değil" uyarısı çıkar.</li>
+<li>Dolap yokken "Kesim listesi boş" yazar; Yapım'a dönüp dolap ekleyin.</li>
+</ul>
+<h4>Paylaşma düğmeleri</h4>
+<table>
+<tr><th>Düğme</th><th>Ne verir?</th></tr>
+<tr><td>Excel (.xlsx)</td><td>Kesim listesini Excel dosyası olarak paylaşır.</td></tr>
+<tr><td>CSV (Excel)</td><td>Aynı listeyi CSV olarak verir.</td></tr>
+<tr><td>Makine CSV</td><td>Kesim makinesi için CSV. Yanındaki listeden ayırıcı seçilir (noktalı virgül, virgül, sekme) ve <b>Başlık satırı</b> kutusuyla ilk satırın başlık olup olmayacağı belirlenir. Seçimleriniz hatırlanır.</td></tr>
+<tr><td>PDF</td><td>Başlıklı, tarihli PDF.</td></tr>
+<tr><td>Yazdır</td><td>Yazdırma ekranını açar.</td></tr>
+<tr><td>Ebatlamaya gönder</td><td>Plaka kesim atölyesine gidecek temiz ebat listesini metin olarak paylaşır veya panoya kopyalar ("Ebatlama listesi kopyalandı"). Ölçüler bitmiş ölçüdür.</td></tr>
+</table>
+
+<h3>14.2 Hırdavat</h3>
+<p>Menteşe, çekmece rayı, kulp, ayak gibi kalemler toplam adet olarak ve her dolaptaki adetleriyle listelenir. Adetler dolap eklendikçe kendiliğinden hesaplanır. Excel, CSV, PDF ve Yazdır düğmeleri vardır. Dolap yoksa "Hırdavat listesi boş" yazar.</p>
+
+<h3>14.3 Fiyat</h3>
+<p>Maliyet ve teklifin hepsi buradadır. Önce fiyatlarınızı girersiniz, program toplamı hesaplar.</p>
+<table>
+<tr><th>Bölüm</th><th>İçerik</th></tr>
+<tr><td><b>Fiyatlarım</b> (para birimi Ayarlar'dan)</td><td>Kullandığınız her malzeme ve kalınlık için <i>plaka tanesi fiyatı</i>; <i>Bant, metresi</i>; kulp, menteşe, ray gibi hırdavat için <i>tanesi</i>; seçili kapak deseni için <i>m² ek fiyat</i>; <b>Fire %</b>; <b>İşçilik + kâr %</b>; <b>KDV %</b> (0 = teklifte KDV yok); <b>Testere payı</b> (mm); <b>Plaka ölçüsü</b> (uzun ve kısa kenar, mm). Girdiğiniz fiyatlar hatırlanır, yeni projede dolu gelir.</td></tr>
+<tr><td><b>Malzemelerim</b></td><td>Gövde, kapak ve arka için malzeme adı ve <b>damarlı</b> kutusu. Damarlı malzemede damar parçanın uzunluk yönündedir; kesim planında parça döndürülmez.</td></tr>
+<tr><td><b>Teklif bilgileri</b></td><td>Firma adı, Telefon, Müşteri adı, Geçerlilik (gün). <b>Teklifte kalem dökümü görünsün</b> kutusu işaretli değilse müşteri yalnız toplamı görür; maliyet ve kâr görünmez. <b>Fiyat KDV dahil gösterilsin</b> seçeneği vardır. Firma bilgisi hatırlanır.</td></tr>
+<tr><td><b>Maliyet</b></td><td>Her kalemin tutarı, Malzeme toplamı, İşçilik + kâr, <b>Toplam</b>, KDV ve <b>Genel toplam</b>. Fiyatı girilmeyen kalemde "fiyat gir" yazar ve 0 sayılır. Plaka sayısı bir tahmindir (alan + fire).</td></tr>
+</table>
+<p>Teklifi <b class="k">Teklifi paylaş</b> ile metin olarak, <b class="k">PDF</b> ile dosya olarak paylaşabilir veya <b class="k">Yazdır</b> ile çıktı alabilirsiniz.</p>
+
+<h3>14.4 Plan</h3>
+<p>Parçalar plakalara dizilir. Plaka ölçüsü ve testere payı Fiyat sekmesinden girilir.</p>
+<figure class="fig">
+<svg viewBox="0 0 640 170" role="img" aria-label="Plaka dizilimi şeması">
+<g font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">
+<rect x="40" y="14" width="360" height="140" fill="#faf6f1" stroke="#7a6a55" stroke-width="2"/>
+<g fill="#ecd9c3" stroke="#a85a2a"><rect x="44" y="18" width="130" height="80"/><rect x="178" y="18" width="110" height="80"/><rect x="292" y="18" width="104" height="80"/><rect x="44" y="102" width="150" height="48"/><rect x="198" y="102" width="90" height="48"/></g>
+<g fill="#4a3426"><text x="109" y="62">D1-1</text><text x="233" y="62">D1-2</text><text x="344" y="62">D2-1</text><text x="119" y="130">D2-2</text><text x="243" y="130">D3-1</text></g>
+<rect x="292" y="102" width="104" height="48" fill="#fff" stroke="#bfae9b" stroke-dasharray="4 3"/><text x="344" y="130" fill="#7a6a5a">artık</text>
+<text x="500" y="60" text-anchor="start" font-size="13" fill="#2b2118">Plaka 1: 5 parça, %78 dolu</text><text x="500" y="82" text-anchor="start" fill="#7a6a5a">En büyük artık: … × …</text>
+</g></svg>
+<figcaption>Her plaka çizilir; parçaların kodları üstünde yazar, kalan en büyük artık gösterilir.</figcaption>
+</figure>
+<ul>
+<li>Malzeme ve kalınlık başına <b>plaka sayısı</b> ve <b>doluluk %</b> yazar.</li>
+<li>Her plakanın çizimi, parça kodları ve ölçüleriyle altında listelenir.</li>
+<li>Doluluk düşükse "artık plaka: kalan büyük parça başka işte kullanılabilir" notu çıkar.</li>
+<li>Plakaya sığmayan parça varsa uyarı verilir.</li>
+<li>Excel, CSV, PDF ve Yazdır düğmeleri planı da paylaşır.</li>
+</ul>
+
+<h2 id="ipuclari">15. İpuçları</h2>
+<ul>
+<li><b>Sırayı koruyun:</b> Proje Ayarları › Yapım › Üretim. Ayarları dolap koymadan önce yapmak işi kolaylaştırır; sonradan değiştirdiğiniz ayar yalnız yeni veya düzenlediğiniz dolaplara uygulanır.</li>
+<li><b>Kopyalama:</b> Aynı ölçüde birkaç dolap için <b>Aynısını ekle</b> ve <b>Son ölçüyü kullan</b> zaman kazandırır.</li>
+<li><b>Yedek:</b> Önemli projeleri ⋯ › <b>Gönder (dosya olarak)</b> ile kendinize yollayın.</li>
+<li><b>Kesmeden önce</b> ilk işlerde ölçüleri kendi hesabınızla kontrol edin ve "Bu listede dikkat edin" kutusunu okuyun.</li>
+<li><b>Kayıt:</b> Projeleriniz telefonunuzda saklanır; sunucuya gönderilmez (<a href="/gizlilik/">Gizlilik Politikası</a>).</li>
+<li><b>Yardım:</b> Soru ve önerileriniz için <a href="mailto:support@mekset.com">support@mekset.com</a>.</li>
+</ul>
+<p class="d">Bu kılavuz uygulamanın güncel sürümüne göre hazırlanmıştır; yeni sürümlerde ekranlar küçük farklılıklar gösterebilir.</p>
+</main>
+</body>
+</html>
